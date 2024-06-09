@@ -106,9 +106,7 @@ function App() {
             <p>Explore</p>
             <p>NFTs</p>
             <p>Pool</p>
-            <div ref={imageRef1} className="uniimage" onClick={handleImageClick1}>
-              <img src={drop} alt="Drop" className={`small-image ${isRotated1 ? 'rotate180' : ''}`} />
-            </div>
+          
           </div>
           <div className="input-icons">
             <FontAwesomeIcon icon={faSearch} className="icon" />
