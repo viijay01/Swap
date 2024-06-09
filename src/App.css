@@ -1,0 +1,188 @@
+body {
+  background-color: #000000! important ;
+  color: white ! important;
+  font-weight: bold ! important;
+  font-size: medium ! important;
+  padding: 10px;
+
+}
+
+.uniimage img.small-image {
+  width: 37px;
+
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  text-align: center;
+  align-items: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 30%;
+  text-align: center;
+  align-items: center;
+
+}
+
+.input-icons {
+  position: relative;
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: 20px;
+  color: #aaa;
+}
+
+.input-field {
+  margin-left: 10px;
+  background-color: #1a1b1a;
+  width: 90%;
+  padding-left: 2.5rem;
+  /* Add space for the icon */
+  height: 2.5rem;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  /* Include padding in the width */
+}
+.input{
+  width: 90%;
+  background-color: #1a1b1a;
+  height: 3.5rem;
+  color: white;
+  border: none;
+}
+
+.cntbtn {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: flex-end;
+
+  button {
+    padding: 13px;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 22px;
+    color: #e769ea;
+    background-color: #301c30;
+    border: none;
+    margin-left: 20px;
+  }
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+  transition: transform 0.1s ease;
+  /* Optional: Adds a smooth transition effect */
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+flex-direction: column;
+}
+
+p {
+padding: 10px;
+margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-items: center;
+}
+
+p:hover {
+  background-color: #aaa;
+}
+
+.active {
+  background-color: #aaa;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  align-items: center;
+
+}
+
+.gearicon {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 19px;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.bigbox{
+  display: flex;
+  flex-direction: row;
+width: 100%;
+
+background-color: #1a1b1a;
+padding: 20px;
+border-radius: 10px;
+ 
+  align-items: center;
+}
+
+#dropdown-basic{
+  background-color: #e769ea;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+
+}
+
+.currencycon{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.down{
+  align-self: center;
+ 
+  position: absolute;
+  border-radius: 10px;
+  background-color: #1a1b1a;
+  border: 8px solid black;
+  padding: 10px;
+}
+.cntbtn2 {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: center;
+  margin: 10px;
+
+  button {
+    width: 100%;
+    padding: 13px;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 22px;
+    color: #e769ea;
+    background-color: #301c30;
+    border: none;
+    
+  }
+}
