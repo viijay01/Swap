@@ -44,6 +44,31 @@ function App() {
     convertAmount(inputAmount, selectedItem, selectedItem2);
   };
 
+  const handleSwapCurrencies = () => {
+    const temp = selectedItem;
+    setSelectedItem(selectedItem2);
+    setSelectedItem2(temp);
+    convertAmount(amount, selectedItem2, selectedItem);
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://api.frankfurter.app/currencies');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        const symbols = Object.keys(data);
+        setCurrencies(symbols);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const convertAmount = async (amount, fromCurrency, toCurrency) => {
     try {
       const response = await fetch(`https://api.frankfurter.app/latest?amount=${amount}&from=${fromCurrency}&to=${toCurrency}`);
@@ -56,42 +81,6 @@ function App() {
       console.error('Error fetching data:', error);
     }
   };
-
-  const handleBodyClick = (event) => {
-    if (imageRef1.current && !imageRef1.current.contains(event.target)) {
-      setIsRotated1(false);
-    }
-    if (imageRef2.current && !imageRef2.current.contains(event.target)) {
-      setIsRotated2(false);
-    }
-  };
-
-  useEffect(() => {
-    document.body.addEventListener('click', handleBodyClick);
-
-    return () => {
-      document.body.removeEventListener('click', handleBodyClick);
-    };
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://api.frankfurter.app/currencies');
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        // Extract currency symbols from the fetched data
-        const symbols = Object.keys(data);
-        setCurrencies(symbols);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   return (
     <div>
@@ -106,7 +95,9 @@ function App() {
             <p>Explore</p>
             <p>NFTs</p>
             <p>Pool</p>
-          
+            <div ref={imageRef1} className="uniimage" onClick={handleImageClick1}>
+              <img src={drop} alt="Drop" className={`small-image ${isRotated1 ? 'rotate180' : ''}`} />
+            </div>
           </div>
           <div className="input-icons">
             <FontAwesomeIcon icon={faSearch} className="icon" />
@@ -150,7 +141,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="down"><FontAwesomeIcon icon={faChevronDown} /></div>
+        <div className="down" onClick={handleSwapCurrencies}><FontAwesomeIcon icon={faChevronDown} /></div>
         <div className="currencycon">
           <div className="bigbox">
             <div className="box">
