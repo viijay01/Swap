@@ -201,4 +201,9 @@ border-radius: 10px;
   .main{
     margin-top:30px
   }
+  
+.uniimage img.small-image {
+  width: 97px;
+
+}
 }
