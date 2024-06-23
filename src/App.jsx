@@ -95,18 +95,18 @@ function App() {
             <p>Explore</p>
             <p>NFTs</p>
             <p>Pool</p>
-            <div ref={imageRef1} className="uniimage" onClick={handleImageClick1}>
+            {/* <div ref={imageRef1} className="uniimage" onClick={handleImageClick1}>
               <img src={drop} alt="Drop" className={`small-image ${isRotated1 ? 'rotate180' : ''}`} />
-            </div>
+            </div> */}
           </div>
           <div className="input-icons">
             <FontAwesomeIcon icon={faSearch} className="icon" />
             <input className="input-field" type="text" placeholder="Search" />
           </div>
           <div className="cntbtn">
-            <div ref={imageRef2} className="uniimage" onClick={handleImageClick2}>
+            {/* <div ref={imageRef2} className="uniimage" onClick={handleImageClick2}>
               <img src={drop} alt="Drop" className={`small-image ${isRotated2 ? 'rotate180' : ''}`} />
-            </div>
+            </div> */}
             <button>Connect</button>
           </div>
         </div>
