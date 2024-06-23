@@ -1,4 +1,4 @@
-import unicornImage from "./unic.png";
+import unicornImage from "./uni.png";
 import drop from "./drop.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear, faSearch, faChevronDown } from '@fortawesome/free-solid-svg-icons';
